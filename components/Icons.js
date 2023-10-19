@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faMap } from "@fortawesome/free-solid-svg-icons";
@@ -6,9 +7,9 @@ import styled from "styled-components";
 const IconsWrapper = styled.nav`
   position: absolute;
   top: 10px;
-  right: 0px;
+  right: 10px;
   z-index: 1;
-  background-color: white;
+  background-color: rgba(173, 216, 230, 0.8); /* Use rgba for transparency */
   color: black;
   display: flex;
 `;

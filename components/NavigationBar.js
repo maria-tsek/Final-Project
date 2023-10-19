@@ -15,7 +15,7 @@ const NavbarWrapper = styled.nav`
 const ListWrapper = styled.ul`
   list-style: none;
   padding: 0;
-  display: flex; /* Align list items horizontally */
+  display: flex;
 `;
 
 const ListItem = styled.li`
@@ -33,17 +33,20 @@ export default function NavigationBar() {
       <ListWrapper>
         <ListItem>
           <Link href="/popular-destinations">
-            <StyledLink>Popular Destinations</StyledLink>
+            Popular destinations
+            {/* <StyledLink>Popular Destinations</StyledLink> */}
           </Link>
         </ListItem>
         <ListItem>
           <Link href="/other-destinations">
-            <StyledLink>Other Destinations</StyledLink>
+            Other Destinations
+            {/* <StyledLink>Other Destinations</StyledLink> */}
           </Link>
         </ListItem>
         <ListItem>
           <Link href="/favorite-destinations">
-            <StyledLink>Favorite Destinations</StyledLink>
+            Favorite Destinations
+            {/* <StyledLink>Favorite Destinations</StyledLink> */}
           </Link>
         </ListItem>
       </ListWrapper>

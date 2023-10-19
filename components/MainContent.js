@@ -4,14 +4,18 @@ import styled from "styled-components";
 
 const MainContentWrapper = styled.div`
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center align children horizontally */
+  flex-direction: column;
+  align-items: center;
 `;
 
-const Header = styled.div`
-  background-color: white;
+const Header = styled.h1`
+  background-color: rgba(173, 216, 230, 0.8); /* Use rgba for transparency */
+  top: 0px;
+  left: 10px;
   width: 100%;
-  margin-left: 20px;
+  text-align: left;
+  position: absolute;
+  margin: 0;
 `;
 
 const ImageCarousel = styled.div`
@@ -51,19 +55,16 @@ const CarouselButton = styled.button`
 const About = styled.div`
   font-size: 1.2em;
   text-align: left;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-left: 20px;
+  padding: 10px;
 `;
 
-const H2About = styled.h2`
-  margin-left: 30px;
-`;
-
-const H4About = styled.h4`
+const H4 = styled.h4`
   font-size: 1.5em;
   font-weight: bold;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 60px;
+  margin-left: 20px;
 `;
 
 export default function MainContent() {
@@ -79,9 +80,7 @@ export default function MainContent() {
 
   return (
     <MainContentWrapper>
-      <Header>
-        <h1>Peloponnese</h1>
-      </Header>
+      <Header>Peloponnese</Header>
       <ImageCarousel>
         <CarouselImage>
           <Image
@@ -96,17 +95,13 @@ export default function MainContent() {
           {images.map((_, index) => (
             <CarouselButton
               key={index}
-              className={`carousel-button ${
-                index === currentImage ? "active" : ""
-              }`}
               onClick={() => handleChangeImage(index)}
             />
           ))}
         </CarouselControls>
       </ImageCarousel>
+      <H4>Peloponnese: Greece's Historic Peninsula of Legends</H4>
       <About>
-        <H2About>About</H2About>
-        <H4About>Peloponnese: Greece's Historic Peninsula of Legends</H4About>
         <p>
           Nestled in the southern part of mainland Greece, the Peloponnese is a
           land steeped in history and mythology. This rugged and diverse
