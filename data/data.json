@@ -58,5 +58,29 @@
     ],
     "mapURL": "https://www.google.com/maps/place/%CE%A0%CF%8D%CE%BB%CE%BF%CF%82,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@36.9119942,21.6877819,15z/data=!3m1!4b1!4m6!3m5!1s0x136172c4b04bba2d:0x500bd2ce2ba47c0!8m2!3d36.9130756!4d21.6963472!16zL20vMGNkX2I?entry=ttu",
     "description": "Nestled along the stunning western coast of the Peloponnese, Pylos is a hidden coastal haven that beckons travelers with its rich historical significance and breathtaking natural beauty. This charming town, surrounded by azure waters and lush landscapes, is steeped in legends and history, making it a must-visit destination for those seeking a mix of culture, adventure, and relaxation. Join us on a virtual journey as we delve into the secrets of Pylos, exploring its ancient past, pristine beaches, and warm, welcoming spirit that make it a true jewel on the Greek coastline."
+  },
+  {
+    "name": "Mystras",
+    "Header": "Mystras: Where Ancient Splendor Meets Contemporary Wonder",
+    "images": [
+      {
+        "image1": "https://www.beskosexp.gr/wp-content/uploads/2020/02/mystras-scaled-e1582826098943.jpg",
+        "image2": "https://www.travelstyle.gr/wp-content/uploads/2019/04/mystras.jpg"
+      }
+    ],
+    "mapURL": "https://www.google.com/maps/place/%CE%9C%CF%85%CF%83%CF%84%CF%81%CE%AC%CF%82+231+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.0697141,22.3707352,16z/data=!4m6!3m5!1s0x1361cc1072536ff3:0x400bd2ce2b99120!8m2!3d37.0688335!4d22.3758082!16zL20vMDFyc25s?entry=ttu",
+    "description": "Explore the captivating world of Mystras, also known as Mistras (Μυστρᾶς/Μιστρᾶς), an extraordinary fortified town with a storied past, nestled in the heart of Laconia, Peloponnese, Greece. Situated majestically on the slopes of Mt. Taygetus, adjacent to the ancient city of Sparta, Mystras once served as the illustrious capital of the Byzantine Despotate of the Morea during the 14th and 15th centuries. It flourished during the Palaeologan Renaissance, hosting the teachings of the renowned Gemistos Plethon and drawing artists and architects of the highest caliber. Mystras bore witness to the passage of time, remaining inhabited even through the Ottoman era, when Western travelers often confused it with ancient Sparta. By the 1830s, a new town, Sparti, was erected approximately eight kilometers to the east, and Mystras was eventually abandoned. Today, it resides within the Sparti municipality following a 2011 local government reform. Mystras' exceptionally well-preserved Byzantine cityscape, its testament to the evolution of Late Byzantine and Post-Byzantine art, has rightfully earned its place on the UNESCO World Heritage List since 1989, making it a unique destination where the echoes of history converge with modern wonders."
+  },
+  {
+    "name": "Nemea",
+    "Header": "Nemea: Where Ancient Legends Meet Modern Discovery",
+    "images": [
+      {
+        "image1": "https://www.visitgreece.gr/files/i_1081680154_nemea_1743x752.jpg",
+        "image2": "https://png.pngtree.com/thumb_back/fh260/background/20220323/pngtree-ancient-temple-of-zeus-in-the-nemea-europe-sky-greece-photo-image_12806874.jpg"
+      }
+    ],
+    "mapURL": "https://www.google.com/maps/place/%CE%9D%CE%B5%CE%BC%CE%AD%CE%B1+205+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.8201497,22.6513502,15z/data=!3m1!4b1!4m6!3m5!1s0x14a0072eb3e673fb:0x8f9b2cacb4b52855!8m2!3d37.82133!4d22.660998!16zL20vMDNocG5o?entry=ttu",
+    "description": "Discover Nemea, a place where the timeless myths of ancient Greece meet the pleasures of today. Located in the heart of the Peloponnese, Nemea is steeped in history, where the legendary Heracles once faced the Nemean Lion. Today, it's renowned for its exceptional Agiorgitiko wines and offers a unique blend of culture, history, and contemporary delights, making it a destination where the past mingles with the present."
   }
 ]
