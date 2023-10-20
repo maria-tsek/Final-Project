@@ -39,7 +39,7 @@ const ImageListItem = styled.li`
 `;
 
 const BackButton = styled(Link)`
-  background-color: #0245a3;
+  background-color: blue;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -52,16 +52,13 @@ const BackButton = styled(Link)`
 `;
 
 export default function PopularDestinations() {
-  const { data, error, isLoading } = useSWR(
-    "/api/popular-destinations",
-    fetcher
-  );
+  const { data, error, isLoading } = useSWR("/api/other-destinations", fetcher);
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
   return (
     <Container>
-      <Title>Popular Destinations</Title>
+      <Title>Other Destinations</Title>
       {data.map((place) => (
         <Destination key={place._id}>
           <h2>{place.name}</h2>
