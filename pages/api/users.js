@@ -1,6 +1,5 @@
-// pages/api/popular-places.js
 import dbConnect from "../../db/connect";
-import OtherPlace from "@/db/models/OtherPlace";
+import User from "@/db/models/User";
 
 export default async function handler(req, res) {
   const dbconnected = await dbConnect();
@@ -8,8 +7,9 @@ export default async function handler(req, res) {
 
   if (req.method === "GET") {
     try {
-      const places = await OtherPlace.find();
-      res.status(200).json(places);
+      const users = await User.find();
+      res.status(200).json(users);
+      console.log("users", users);
     } catch (error) {
       res.status(500).json({ error: "Error fetching data" });
     }

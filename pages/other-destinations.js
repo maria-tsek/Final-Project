@@ -16,7 +16,8 @@ const Title = styled.h1`
   font-weight: bold;
   margin-bottom: 20px;
   margin-left: 10px;
-  background-color: #add8e6;
+  // background-color: #add8e6;
+  color: #071952;
   width: 100%;
 `;
 
@@ -39,7 +40,7 @@ const ImageListItem = styled.li`
 `;
 
 const BackButton = styled(Link)`
-  background-color: blue;
+  background-color: #071952;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -51,7 +52,7 @@ const BackButton = styled(Link)`
   margin-left: 10px;
 `;
 
-export default function PopularDestinations() {
+export default function OtherDestinations() {
   const { data, error, isLoading } = useSWR("/api/other-destinations", fetcher);
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;

@@ -15,6 +15,7 @@ const otherPlaceSchema = new Schema(
     ],
     mapURL: { type: String, required: true },
     description: { type: String, required: true },
+    favorite: { type: Boolean, default: false },
   },
   { collection: "other_places" }
 );

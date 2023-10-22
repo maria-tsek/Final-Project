@@ -1,0 +1,16 @@
+[
+  {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "username": "johndoe",
+    "profileImage": "url_to_profile_image",
+    "otherUserData": "Additional user data"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "janesmith@example.com",
+    "username": "janesmith",
+    "profileImage": "url_to_profile_image",
+    "otherUserData": "Additional user data"
+  }
+]

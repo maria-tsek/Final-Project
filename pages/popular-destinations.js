@@ -16,7 +16,8 @@ const Title = styled.h1`
   font-weight: bold;
   margin-bottom: 20px;
   margin-left: 10px;
-  background-color: #add8e6;
+  // background-color: #add8e6;
+  color: #071952;
   width: 100%;
 `;
 
@@ -39,7 +40,7 @@ const ImageListItem = styled.li`
 `;
 
 const BackButton = styled(Link)`
-  background-color: #0245a3;
+  background-color: #071952;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
