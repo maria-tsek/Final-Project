@@ -1,9 +1,10 @@
 import React from "react";
-import useSWR from "swr";
+import styled from "styled-components";
+import NavigationBar from "@/components/NavigationBar";
 import Image from "next/image";
 import Link from "next/link";
-import NavigationBar from "@/components/NavigationBar";
-import styled from "styled-components";
+import useSWR from "swr";
+import FavoriteButton from "@/components/FavoriteButton";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -16,7 +17,7 @@ const Title = styled.h1`
   font-weight: bold;
   margin-bottom: 20px;
   margin-left: 10px;
-  background-color: #add8e6;
+  color: #071952;
   width: 100%;
 `;
 
@@ -25,6 +26,7 @@ const Destination = styled.div`
   padding: 16px;
   margin-bottom: 20px;
   list-style-type: none;
+  position: relative; /* Added for the heart button positioning */
 `;
 
 const ImageList = styled.ul`
@@ -39,7 +41,7 @@ const ImageListItem = styled.li`
 `;
 
 const BackButton = styled(Link)`
-  background-color: blue;
+  background-color: #071952;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -51,20 +53,25 @@ const BackButton = styled(Link)`
   margin-left: 10px;
 `;
 
-export default function PopularDestinations() {
-  const { data, error, isLoading } = useSWR("/api/other-destinations", fetcher);
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+const OtherDestinations = () => {
+  const {
+    data: destinations,
+    error,
+    mutate,
+  } = useSWR("/api/other-destinations", fetcher);
+
+  if (error) return <div>Failed to load destinations</div>;
+  if (!destinations) return <div>Loading destinations...</div>;
 
   return (
     <Container>
       <Title>Other Destinations</Title>
-      {data.map((place) => (
-        <Destination key={place._id}>
-          <h2>{place.name}</h2>
-          <p>{place.Header}</p>
+      {destinations.map((destination) => (
+        <Destination key={destination._id}>
+          <h2>{destination.name}</h2>
+          <FavoriteButton mutate={mutate} destinationId={destination._id} />
           <ImageList>
-            {place.images.map((image, index) => (
+            {destination.images.map((image, index) => (
               <ImageListItem key={index}>
                 <a
                   href={image.image1}
@@ -83,13 +90,17 @@ export default function PopularDestinations() {
           </ImageList>
           <li>
             <strong>Map URL:</strong>{" "}
-            <a href={place.mapURL} target="_blank" rel="noopener noreferrer">
-              {place.mapURL}
+            <a
+              href={destination.mapURL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {destination.mapURL}
             </a>
           </li>
           <li>
             <strong>Description:</strong>
-            <p>{place.description}</p>
+            <p>{destination.description}</p>
           </li>
         </Destination>
       ))}
@@ -97,4 +108,6 @@ export default function PopularDestinations() {
       <NavigationBar />
     </Container>
   );
-}
+};
+
+export default OtherDestinations;

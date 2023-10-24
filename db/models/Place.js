@@ -2,9 +2,10 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const popularPlaceSchema = new Schema(
+const placeSchema = new Schema(
   {
     name: { type: String, required: true },
+    type: { type: String, required: true },
     Header: { type: String, required: true },
     images: [
       {
@@ -15,12 +16,11 @@ const popularPlaceSchema = new Schema(
     ],
     mapURL: { type: String, required: true },
     description: { type: String, required: true },
+    favorite: { type: Boolean, default: false },
   },
-  { collection: "popular_places" }
+  { collection: "places" }
 );
 
-const PopularPlace =
-  mongoose.models.PopularPlace ||
-  mongoose.model("PopularPlace", popularPlaceSchema);
+const Place = mongoose.models.Place || mongoose.model("Place", placeSchema);
 
-export default PopularPlace;
+export default Place;

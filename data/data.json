@@ -1,6 +1,7 @@
 [
   {
     "name": "Nafplio",
+    "type": "popular",
     "Header": "Nafplio: Greece's Enchanting Seaside Jewel",
     "images": [
       {
@@ -13,6 +14,7 @@
   },
   {
     "name": "Monemvasia",
+    "type": "popular",
     "Header": "Discover Monemvasia: A Hidden Gem in Greece",
     "images": [
       {
@@ -25,6 +27,7 @@
   },
   {
     "name": "Elafonisos",
+    "type": "popular",
     "Header": "Elafonisos: Greece's Hidden Island Paradise",
     "images": [
       {
@@ -37,6 +40,7 @@
   },
   {
     "name": "Mani",
+    "type": "popular",
     "Header": "Mani: Greece's Rugged Peninsula of Legends",
     "images": [
       {
@@ -44,11 +48,12 @@
         "image2": "https://exploringgreece.tv/wp-content/uploads/2021/06/shutterstock_428296147.jpg"
       }
     ],
-    "mapURL": "https://www.google.com/maps/place/%CE%9C%CE%AC%CE%BD%CE%B7/@36.6173843,22.1078116,10z/data=!3m1!4b1!4m6!3m5!1s0x1361e5f4b2354459:0x8f7244cd71e180a7!8m2!3d36.7721873!4d22.3814624!16zL20vMDF6MmJq?entry=ttu",
-    "description": "Welcome to Mani, a place where rugged landscapes, ancient traditions, and captivating history come together to create a truly unique destination. Nestled in the southern part of the Peloponnese, Mani's wild beauty is matched only by its rich cultural heritage. With its dramatic coastal cliffs, stone tower villages, and a landscape seemingly untouched by time, Mani offers an authentic Greek experience that's unlike any other. Join us as we embark on a virtual journey to discover Mani's tales of heroes, its timeless architecture, and the spirit of a place where nature and culture have coexisted for centuries, shaping the very soul of this remarkable region."
+    "mapURL": "https://www.google.com/maps/place/%CE%9C%CE%AC%CE%BD%CE%B7/@36.6173843,22.1078116,10z/data=!3m1!4b1!4m6!3m5!1s0x1361e5f4b2354459:0x8f7244cd71e180a7!8m2!3d36.6173843!4d22.1078116!16zL20vMDM2MDA4?entry=ttu",
+    "description": "Mani, a rugged and enchanting peninsula in the southern Peloponnese, is a place where Greek legends come to life. With its dramatic landscapes, stone towers, and a fiercely independent spirit, Mani is a destination like no other. This land, where the mountains meet the sea, offers a journey through history, tradition, and natural beauty. Join us as we explore the myths and mysteries of Mani, Greece's hidden gem, and uncover the captivating tales that have been etched into its stone for centuries."
   },
   {
     "name": "Pylos",
+    "type": "popular",
     "Header": "Pylos: Greece's Coastal Haven of History and Beauty",
     "images": [
       {
@@ -56,11 +61,12 @@
         "image2": "https://exit.gr/wp-content/uploads/2022/05/pylos_voidokoilia.jpg"
       }
     ],
-    "mapURL": "https://www.google.com/maps/place/%CE%A0%CF%8D%CE%BB%CE%BF%CF%82,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@36.9119942,21.6877819,15z/data=!3m1!4b1!4m6!3m5!1s0x136172c4b04bba2d:0x500bd2ce2ba47c0!8m2!3d36.9130756!4d21.6963472!16zL20vMGNkX2I?entry=ttu",
-    "description": "Nestled along the stunning western coast of the Peloponnese, Pylos is a hidden coastal haven that beckons travelers with its rich historical significance and breathtaking natural beauty. This charming town, surrounded by azure waters and lush landscapes, is steeped in legends and history, making it a must-visit destination for those seeking a mix of culture, adventure, and relaxation. Join us on a virtual journey as we delve into the secrets of Pylos, exploring its ancient past, pristine beaches, and warm, welcoming spirit that make it a true jewel on the Greek coastline."
+    "mapURL": "https://www.google.com/maps/place/%CE%A0%CF%8D%CE%BB%CE%BF%CF%82,+%CE%9E%CE%B1%CE%B2%CE%AC+262+32,+Greece",
+    "description": "Nestled along the stunning western coast of the Peloponnese, Pylos is a coastal haven that blends history and beauty in perfect harmony. With its picturesque harbor, imposing castle, and lush landscapes, Pylos is an inviting destination for travelers seeking a taste of both natural and historical wonders. Join us as we explore the charms of Pylos, from its ancient past to its vibrant present, and discover why it's a must-visit location on the Greek map."
   },
   {
     "name": "Mystras",
+    "type": "popular",
     "Header": "Mystras: Where Ancient Splendor Meets Contemporary Wonder",
     "images": [
       {
@@ -68,11 +74,12 @@
         "image2": "https://www.travelstyle.gr/wp-content/uploads/2019/04/mystras.jpg"
       }
     ],
-    "mapURL": "https://www.google.com/maps/place/%CE%9C%CF%85%CF%83%CF%84%CF%81%CE%AC%CF%82+231+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.0697141,22.3707352,16z/data=!4m6!3m5!1s0x1361cc1072536ff3:0x400bd2ce2b99120!8m2!3d37.0688335!4d22.3758082!16zL20vMDFyc25s?entry=ttu",
-    "description": "Explore the captivating world of Mystras, also known as Mistras (Μυστρᾶς/Μιστρᾶς), an extraordinary fortified town with a storied past, nestled in the heart of Laconia, Peloponnese, Greece. Situated majestically on the slopes of Mt. Taygetus, adjacent to the ancient city of Sparta, Mystras once served as the illustrious capital of the Byzantine Despotate of the Morea during the 14th and 15th centuries. It flourished during the Palaeologan Renaissance, hosting the teachings of the renowned Gemistos Plethon and drawing artists and architects of the highest caliber. Mystras bore witness to the passage of time, remaining inhabited even through the Ottoman era, when Western travelers often confused it with ancient Sparta. By the 1830s, a new town, Sparti, was erected approximately eight kilometers to the east, and Mystras was eventually abandoned. Today, it resides within the Sparti municipality following a 2011 local government reform. Mystras' exceptionally well-preserved Byzantine cityscape, its testament to the evolution of Late Byzantine and Post-Byzantine art, has rightfully earned its place on the UNESCO World Heritage List since 1989, making it a unique destination where the echoes of history converge with modern wonders."
+    "mapURL": "https://www.google.com/maps/place/%CE%9C%CF%85%CF%83%CF%84%CF%81%CE%AC,+%CE%9E%CE%B1%CE%B2%CE%AC+231+00,+Greece",
+    "description": "Mystras, also known as Mistras (Μυστράς), is a place where ancient splendor mingles with contemporary wonder. Nestled on a steep hill, this well-preserved Byzantine fortress town offers a journey back in time through its cobblestone streets, medieval buildings, and breathtaking views. Join us as we explore the captivating world of Mystras, uncovering its historical treasures and experiencing the enchantment of this UNESCO World Heritage site."
   },
   {
     "name": "Nemea",
+    "type": "popular",
     "Header": "Nemea: Where Ancient Legends Meet Modern Discovery",
     "images": [
       {
@@ -80,7 +87,72 @@
         "image2": "https://png.pngtree.com/thumb_back/fh260/background/20220323/pngtree-ancient-temple-of-zeus-in-the-nemea-europe-sky-greece-photo-image_12806874.jpg"
       }
     ],
-    "mapURL": "https://www.google.com/maps/place/%CE%9D%CE%B5%CE%BC%CE%AD%CE%B1+205+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.8201497,22.6513502,15z/data=!3m1!4b1!4m6!3m5!1s0x14a0072eb3e673fb:0x8f9b2cacb4b52855!8m2!3d37.82133!4d22.660998!16zL20vMDNocG5o?entry=ttu",
-    "description": "Discover Nemea, a place where the timeless myths of ancient Greece meet the pleasures of today. Located in the heart of the Peloponnese, Nemea is steeped in history, where the legendary Heracles once faced the Nemean Lion. Today, it's renowned for its exceptional Agiorgitiko wines and offers a unique blend of culture, history, and contemporary delights, making it a destination where the past mingles with the present."
+    "mapURL": "https://www.google.com/maps/place/%CE%9D%CE%B5%CE%BC%CE%AD%CE%B1+205+00,+Greece",
+    "description": "Discover Nemea, a place where the timeless myths of ancient Greece meet modern-day exploration. Located in the northeastern part of the Peloponnese, Nemea is known for its ancient ruins, including the Temple of Zeus and the Nemean Stadium, where ancient athletic competitions took place. This region is also famous for its vineyards and wine production. Join us on a journey to Nemea and explore the legends, history, and modern discoveries that await in this captivating corner of Greece."
+  },
+  {
+    "name": "Patra",
+    "type": "other",
+    "Header": "Patra: Where Timeless Craftsmanship Meets Modern Elegance",
+    "images": [
+      {
+        "image1": "https://st4.depositphotos.com/1723045/30980/i/600/depositphotos_309807824-stock-photo-view-of-patras-town-in.jpg",
+        "image2": "https://www.patrasevents.gr/imgsrv/f/full/1654686.jpg"
+      }
+    ],
+    "mapURL": "https://www.google.com/maps/place/%CE%A0%CE%AC%CF%84%CF%81%CE%B1,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@38.2490746,21.7044062,13z/data=!3m1!4b1!4m6!3m5!1s0x135e3599a524ed2d:0x400bd2ce2b98ca0!8m2!3d38.2466395!4d21.734574!16zL20vMDJkZmx2?entry=ttu",
+    "description": "A haven of style and sophistication nestled at the intersection of tradition and innovation. Like a radiant jewel along the coast, Patra invites you to explore its rich heritage and contemporary elegance. Our legacy of craftsmanship is a testament to the seamless fusion of timeless beauty and modern design. Journey with us to discover the allure of Patra, where each creation is a harmonious blend of heritage and ingenuity. Immerse yourself in a world where tradition meets innovation, and let Patra be your guide to a universe of exquisite craftsmanship and lasting elegance."
+  },
+  {
+    "name": "Sparti",
+    "type": "other",
+    "Header": "Sparti: Where Tradition and Progress Unite",
+    "images": [
+      {
+        "image1": "https://thecaller.gr/wp-content/uploads/2021/05/210514133617_391-%CE%91%CE%93%CE%91%CE%9B%CE%9C%CE%91-%CE%9B%CE%95%CE%A9%CE%9D%CE%99%CE%94%CE%91-%CE%A3%CE%A0%CE%91%CE%A1%CE%A4%CE%97.jpg",
+        "image2": "https://kotsiristravel.gr/wp-content/uploads/2022/04/%CE%A3%CF%80%CE%AC%CF%81%CF%84%CE%B7.jpg"
+      }
+    ],
+    "mapURL": "https://www.google.com/maps/place/%CE%A3%CF%80%CE%AC%CF%81%CF%84%CE%B7+231+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.0735175,22.4193374,15z/data=!3m1!4b1!4m6!3m5!1s0x1361d2760a6f3319:0x55c178decfd13663!8m2!3d37.074461!4d22.430264!16s%2Fm%2F02r15xm?entry=ttu",
+    "description": "Sparti, where the rich tapestry of tradition intersects seamlessly with the march of progress. Nestled in the heart of a region steeped in history, Sparti is a place where ancient roots entwine with contemporary aspirations. Our commitment to preserving heritage while embracing innovation defines the essence of Sparti. Join us on a journey to uncover the captivating spirit of this town, a destination that weaves a timeless narrative with a modern flair, offering a unique blend of history, culture, and progress in one enchanting package."
+  },
+  {
+    "name": "Tripoli",
+    "type": "other",
+    "Header": "Tripoli: Where Past and Present Converge",
+    "images": [
+      {
+        "image1": "https://live.staticflickr.com/65535/48075942978_f5330c7ba8_b.jpg",
+        "image2": "https://www.triimero.gr/assets/uploads/2021/01/arkadia.jpg"
+      }
+    ],
+    "mapURL": "https://www.google.com/maps/place/%CE%A4%CF%81%CE%AF%CF%80%CE%BF%CE%BB%CE%B7+221+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.5327796,22.3057904,11.64z/data=!4m6!3m5!1s0x136016f96cfcca21:0xdd407121c8634fca!8m2!3d37.5101357!4d22.372644!16zL20vMDJmeW40?entry=ttu",
+    "description": "Welcome to Tripoli, a city where the echoes of history resound in the vibrant pulse of today. Situated in a region steeped in cultural significance, Tripoli embodies the perfect balance between tradition and modernity. Our commitment to preserving the essence of our heritage while embracing contemporary life defines the heart of Tripoli. Join us on a journey to explore the captivating spirit of this city, a place where the stories of the past meet the energy of the present, offering a unique blend of history, culture, and modern life in one captivating destination."
+  },
+  {
+    "name": "Korinthos",
+    "type": "other",
+    "Header": "Korinthos: Where History and Today Unite",
+    "images": [
+      {
+        "image1": "https://tolo-taxi.com/images/2019/04/25/the-corinth-canal.jpg",
+        "image2": "https://www.terra-relaxa.gr/images/aksiotheata/arxaia-korinthos/arxaia-korinthos-03.jpg"
+      }
+    ],
+    "mapURL": "https://www.google.com/maps/place/%CE%9A%CF%8C%CF%81%CE%B9%CE%BD%CE%B8%CE%BF%CF%82+201+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.9359809,22.9099697,14z/data=!3m1!4b1!4m6!3m5!1s0x14a0144ce0a75b5f:0xcbec55e5ce5dabf4!8m2!3d37.9386365!4d22.9322383!16zL20vMDFfMHk?entry=ttu",
+    "description": "Discover Korinthos, a city where the threads of history seamlessly intertwine with the vibrancy of the present. Nestled in a region rich in cultural heritage, Korinthos strikes a harmonious balance between tradition and modern life. Our commitment to preserving our cultural roots while embracing contemporary living defines the very essence of Korinthos. Join us on a journey to explore the captivating spirit of this city, where the stories of the past converge with the energy of the present, creating a unique fusion of history, culture, and modern living in one extraordinary destination."
+  },
+  {
+    "name": "Kalamata",
+    "type": "other",
+    "Header": "Kalamata: Where History and Modernity Merge",
+    "images": [
+      {
+        "image1": "https://kalamatajournal.gr/media/k2/items/cache/f2978a5aafda08c6534e9153b1c107e9_XL.jpg",
+        "image2": "https://www.apartmentskalamata.gr/wp-content/uploads/2020/08/%CE%BA%άστρο-καλαμάτας.jpg"
+      }
+    ],
+    "mapURL": "https://www.google.com/maps/place/%CE%9A%CE%B1%CE%BB%CE%B1%CE%BC%CE%AC%CF%84%CE%B1+241+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.0350898,22.074322,14z/data=!3m1!4b1!4m6!3m5!1s0x1361b099624b7829:0xfc1f95ed71625f9e!8m2!3d37.0366386!4d22.1143716!16zL20vMDNmX2Rn?entry=ttu",
+    "description": "Welcome to Kalamata, a city where the rich tapestry of history seamlessly blends with the dynamism of the modern age. Nestled in a region steeped in culture and tradition, Kalamata is a place where the past and present coexist in perfect harmony. Our commitment to preserving our heritage while embracing contemporary life defines the essence of Kalamata. Join us on a journey to explore the captivating spirit of this city, where the stories of the past converge with the vibrancy of today, offering a unique fusion of history, culture, and modern living in one enchanting destination."
   }
 ]

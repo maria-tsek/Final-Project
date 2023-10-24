@@ -1,12 +1,13 @@
-import dbConnect from "../../db/connect";
-import Place from "@/db/models/Place";
+import dbConnect from "@/db/connect";
+import User from "@/db/models/User";
+
 export default async function handler(req, res) {
   await dbConnect();
 
   if (req.method === "GET") {
     try {
-      const places = await Place.find({ type: "popular" });
-      res.status(200).json(places);
+      const users = await User.find();
+      res.status(200).json(users);
     } catch (error) {
       res.status(500).json({ error: "Error fetching data" });
     }
