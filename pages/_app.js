@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import { useEffect, useState } from "react";
-import { SessionProvider } from "next-auth/react"; // Import SessionProvider
+import { SessionProvider } from "next-auth/react";
 
 export default function App({
   Component,

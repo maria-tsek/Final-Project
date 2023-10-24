@@ -2,9 +2,10 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const otherPlaceSchema = new Schema(
+const placeSchema = new Schema(
   {
     name: { type: String, required: true },
+    type: { type: String, required: true },
     Header: { type: String, required: true },
     images: [
       {
@@ -17,10 +18,9 @@ const otherPlaceSchema = new Schema(
     description: { type: String, required: true },
     favorite: { type: Boolean, default: false },
   },
-  { collection: "other_places" }
+  { collection: "places" }
 );
 
-const OtherPlace =
-  mongoose.models.OtherPlace || mongoose.model("OtherPlace", otherPlaceSchema);
+const Place = mongoose.models.Place || mongoose.model("Place", placeSchema);
 
-export default OtherPlace;
+export default Place;

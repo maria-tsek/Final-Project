@@ -9,6 +9,7 @@ const userSchema = new Schema(
     username: { type: String },
     profileImage: { type: String },
     otherUserData: { type: String },
+    favoritePlaces: [{ type: mongoose.Types.ObjectId, ref: "Place" }],
   },
   { collection: "users" }
 );

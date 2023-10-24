@@ -5,6 +5,8 @@ import MainContent from "../components/MainContent";
 import dynamic from "next/dynamic";
 import styled from "styled-components";
 
+import { useSession } from "next-auth/react";
+
 const MapOfGreece = dynamic(() => import("../components/MapOfGreece"), {
   ssr: false,
 });
@@ -16,6 +18,7 @@ const HomePageWrapper = styled.div`
 `;
 
 export default function Home() {
+  const { data: session } = useSession();
   return (
     <HomePageWrapper>
       <Icons />

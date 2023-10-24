@@ -14,8 +14,7 @@ export const authOptions = {
           name: data.name,
           email: data.email,
           image: data.avatar_url,
-          admin: false,
-          preferedColors: ["#dddddd", "#ffffff"],
+          favoritePlaces: [],
         };
       },
     }),

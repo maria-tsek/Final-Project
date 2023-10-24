@@ -1,6 +1,7 @@
 [
   {
     "name": "Patra",
+    "type": "other",
     "Header": "Patra: Where Timeless Craftsmanship Meets Modern Elegance",
     "images": [
       {
@@ -13,6 +14,7 @@
   },
   {
     "name": "Sparti",
+    "type": "other",
     "Header": "Sparti: Where Tradition and Progress Unite",
     "images": [
       {
@@ -25,6 +27,7 @@
   },
   {
     "name": "Tripoli",
+    "type": "other",
     "Header": "Tripoli: Where Past and Present Converge",
     "images": [
       {
@@ -37,6 +40,7 @@
   },
   {
     "name": "Korinthos",
+    "type": "other",
     "Header": "Korinthos: Where History and Today Unite",
     "images": [
       {
@@ -49,11 +53,12 @@
   },
   {
     "name": "Kalamata",
+    "type": "other",
     "Header": "Kalamata: Where History and Modernity Merge",
     "images": [
       {
         "image1": "https://kalamatajournal.gr/media/k2/items/cache/f2978a5aafda08c6534e9153b1c107e9_XL.jpg",
-        "image2": "https://www.apartmentskalamata.gr/wp-content/uploads/2020/08/%CE%BA%CE%AC%CF%83%CF%84%CF%81%CE%BF-%CE%BA%CE%B1%CE%BB%CE%B1%CE%BC%CE%AC%CF%84%CE%B1%CF%82.jpg"
+        "image2": "https://www.apartmentskalamata.gr/wp-content/uploads/2020/08/%CE%BA%άστρο-καλαμάτας.jpg"
       }
     ],
     "mapURL": "https://www.google.com/maps/place/%CE%9A%CE%B1%CE%BB%CE%B1%CE%BC%CE%AC%CF%84%CE%B1+241+00,+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1/@37.0350898,22.074322,14z/data=!3m1!4b1!4m6!3m5!1s0x1361b099624b7829:0xfc1f95ed71625f9e!8m2!3d37.0366386!4d22.1143716!16zL20vMDNmX2Rn?entry=ttu",
