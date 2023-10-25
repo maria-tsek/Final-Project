@@ -5,6 +5,7 @@ import MainContent from "../components/MainContent";
 import dynamic from "next/dynamic";
 import styled from "styled-components";
 import MapBox from "./map";
+import styles from "../styles/Home.module.css";
 
 import { useSession } from "next-auth/react";
 

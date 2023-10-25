@@ -7,19 +7,21 @@ import useSWR from "swr";
 import FavoriteButton from "@/components/FavoriteButton";
 import { useSession } from "next-auth/react";
 
-// const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
   padding-bottom: 0px;
 `;
 
 const Title = styled.h1`
   font-size: 24px;
+  margin-left: 50px;
+  margin-top: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
-  margin-left: 10px;
   color: #071952;
   width: 100%;
+  text-align: center; /* Center text horizontally */
 `;
 
 const Destination = styled.div`
@@ -27,31 +29,31 @@ const Destination = styled.div`
   padding: 16px;
   margin-bottom: 20px;
   list-style-type: none;
-  position: relative; /* Added for the heart button positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center text horizontally */
 `;
 
 const ImageList = styled.ul`
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow images to wrap to the next row */
+  justify-content: center; /* Center images horizontally */
   margin-top: 16px;
+  padding: 0; /* Reset padding to remove extra space */
 `;
 
 const ImageListItem = styled.li`
-  margin-right: 10px;
+  margin: 10px; /* Add spacing around images */
 `;
 
-const BackButton = styled(Link)`
-  background-color: #071952;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: inline-block;
-  margin-left: 10px;
+const BackLink = styled(Link)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #071952;
 `;
 
 const PopularDestinations = () => {
@@ -68,6 +70,9 @@ const PopularDestinations = () => {
 
   return (
     <Container>
+      <BackLink href="/">Peloponnese</BackLink>
+
+      <Title>Popular Destinations</Title>
       {destinations.map((destination) => (
         <Link
           key={destination._id}
@@ -115,7 +120,6 @@ const PopularDestinations = () => {
           </Destination>
         </Link>
       ))}
-      <BackButton href="/">Peloponnese</BackButton>
       <NavigationBar />
     </Container>
   );
