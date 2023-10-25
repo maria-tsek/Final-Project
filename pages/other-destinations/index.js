@@ -7,51 +7,49 @@ import useSWR from "swr";
 import FavoriteButton from "@/components/FavoriteButton";
 import { useSession } from "next-auth/react";
 
-// const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
 const Container = styled.div`
-  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center contents vertically */
+  text-align: center; /* Center align text within the container */
+  min-height: 100vh; /* Minimum height to take up the full viewport */
 `;
 
 const Title = styled.h1`
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
-  margin-left: 10px;
   color: #071952;
   width: 100%;
+  margin: 0; /* Reset margin to avoid extra space */
 `;
 
 const Destination = styled.div`
+  margin: 20px 0;
   border: 1px solid #ddd;
-  padding: 16px;
-  margin-bottom: 20px;
-  list-style-type: none;
-  position: relative; /* Added for the heart button positioning */
+  padding: 10px;
+  text-align: center;
 `;
 
 const ImageList = styled.ul`
   list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
-  margin-top: 16px;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping images when necessary */
+  align-items: center;
 `;
 
 const ImageListItem = styled.li`
-  margin-right: 10px;
+  margin: 10px;
 `;
 
-const BackButton = styled(Link)`
-  background-color: #071952;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: inline-block;
-  margin-left: 10px;
+const BackLink = styled(Link)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #071952;
 `;
 
 const OtherDestinations = () => {
@@ -68,6 +66,8 @@ const OtherDestinations = () => {
 
   return (
     <Container>
+      <BackLink href="/">Peloponnese</BackLink>
+
       <Title>Other Destinations</Title>
       {destinations.map((destination) => (
         <Link
@@ -116,7 +116,6 @@ const OtherDestinations = () => {
           </Destination>
         </Link>
       ))}
-      <BackButton href="/">Peloponnese</BackButton>
       <NavigationBar />
     </Container>
   );

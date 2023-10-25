@@ -9,6 +9,11 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
   padding: 20px;
 `;
 
@@ -27,6 +32,11 @@ const BackLink = styled(Link)`
 
 const DestinationContainer = styled.div`
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1; /* Grow to fill available space */
 `;
 
 const DestinationTitle = styled.h2`
@@ -36,10 +46,14 @@ const DestinationTitle = styled.h2`
 const ImagesList = styled.ul`
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ImageItem = styled.li`
-  margin-bottom: 20px;
+  margin: 10px;
 `;
 
 const MapLink = styled.a`
@@ -49,6 +63,11 @@ const MapLink = styled.a`
 
 const Description = styled.p`
   font-size: 16px;
+`;
+
+const NavigationBarContainer = styled.div`
+  text-align: center;
+  width: 100%;
 `;
 
 const DetailPage = () => {
@@ -103,7 +122,9 @@ const DetailPage = () => {
           <Description>{destination.description}</Description>
         </li>
       </DestinationContainer>
-      <NavigationBar />
+      <NavigationBarContainer>
+        <NavigationBar />
+      </NavigationBarContainer>
     </PageContainer>
   );
 };

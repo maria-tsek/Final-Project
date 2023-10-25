@@ -1,3 +1,5 @@
+import React from "react";
+import styled from "styled-components";
 import useSWR from "swr";
 import { useSession } from "next-auth/react";
 import NavigationBar from "@/components/NavigationBar";
@@ -5,6 +7,54 @@ import Image from "next/image";
 import Link from "next/link";
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const BackLink = styled(Link)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #071952;
+`;
+
+const Title = styled.h1`
+  font-size: 24px;
+  color: black;
+`;
+
+const FavoritePlace = styled.div`
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+`;
+
+const PlaceName = styled.h2`
+  font-size: 20px;
+  color: #444;
+`;
+
+const ImageList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const ImageListItem = styled.li`
+  margin: 10px 0;
+`;
+
+const MapUrl = styled.p`
+  font-weight: bold;
+`;
+
+const Description = styled.p`
+  font-style: italic;
+`;
 
 export default function FavoriteDestinations() {
   const { data: session } = useSession();
@@ -18,68 +68,17 @@ export default function FavoriteDestinations() {
 
   const favoritePlaces = data.favoritePlaces;
 
-  const containerStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  };
-
-  const titleStyle = {
-    fontSize: "24px",
-    color: "black",
-  };
-
-  const favoritePlaceStyle = {
-    margin: "20px 0",
-    border: "1px solid #ddd",
-    padding: "10px",
-    textAlign: "center",
-  };
-
-  const placeNameStyle = {
-    fontSize: "20px",
-    color: "#444",
-  };
-
-  const imageListStyle = {
-    listStyle: "none",
-    padding: 0,
-  };
-
-  const imageListItemStyle = {
-    margin: "10px 0",
-  };
-
-  const mapUrlStyle = {
-    fontWeight: "bold",
-  };
-
-  const descriptionStyle = {
-    fontStyle: "italic",
-  };
-
   return (
-    <div style={containerStyle}>
-      <Link
-        href="/"
-        style={{
-          position: "absolute",
-          top: "10px",
-          right: "10px",
-          fontSize: "24px",
-          color: "#071952",
-        }}
-      >
-        Peloponnese
-      </Link>
-      <h1 style={titleStyle}>Favorite Places</h1>
+    <Container>
+      <BackLink href="/">Peloponnese</BackLink>
+      <Title>Favorite Places</Title>
       {favoritePlaces ? (
         favoritePlaces.map((place, index) => (
-          <div key={index} style={favoritePlaceStyle}>
-            <h2 style={placeNameStyle}>{place.name}</h2>
-            <ul style={imageListStyle}>
+          <FavoritePlace key={index}>
+            <PlaceName>{place.name}</PlaceName>
+            <ImageList>
               {place.images.map((image, imgIndex) => (
-                <li key={imgIndex} style={imageListItemStyle}>
+                <ImageListItem key={imgIndex}>
                   <a
                     href={image.image1}
                     target="_blank"
@@ -92,24 +91,24 @@ export default function FavoriteDestinations() {
                       height={200}
                     />
                   </a>
-                </li>
+                </ImageListItem>
               ))}
-            </ul>
-            <p style={mapUrlStyle}>
+            </ImageList>
+            <MapUrl>
               <strong>Map URL:</strong>{" "}
               <a href={place.mapURL} target="_blank" rel="noopener noreferrer">
                 {place.mapURL}
               </a>
-            </p>
-            <p style={descriptionStyle}>
+            </MapUrl>
+            <Description>
               <strong>Description:</strong> {place.description}
-            </p>
-          </div>
+            </Description>
+          </FavoritePlace>
         ))
       ) : (
         <p>No favorite places found.</p>
       )}
       <NavigationBar />
-    </div>
+    </Container>
   );
 }
