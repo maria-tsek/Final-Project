@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import useSWR from "swr";
 import FavoriteButton from "@/components/FavoriteButton";
+import { useSession } from "next-auth/react";
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+// const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Container = styled.div`
   padding-bottom: 0px;
@@ -54,11 +55,13 @@ const BackButton = styled(Link)`
 `;
 
 const OtherDestinations = () => {
+  const { data: session } = useSession();
+  const userId = session?.user?.userId;
   const {
     data: destinations,
     error,
     mutate,
-  } = useSWR("/api/other-destinations", fetcher);
+  } = useSWR("/api/other-destinations");
 
   if (error) return <div>Failed to load destinations</div>;
   if (!destinations) return <div>Loading destinations...</div>;
@@ -69,7 +72,11 @@ const OtherDestinations = () => {
       {destinations.map((destination) => (
         <Destination key={destination._id}>
           <h2>{destination.name}</h2>
-          <FavoriteButton mutate={mutate} destinationId={destination._id} />
+          <FavoriteButton
+            mutate={mutate}
+            destinationId={destination._id}
+            userId={userId}
+          />
           <ImageList>
             {destination.images.map((image, index) => (
               <ImageListItem key={index}>
