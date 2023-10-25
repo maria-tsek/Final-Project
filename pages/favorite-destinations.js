@@ -4,13 +4,13 @@ import NavigationBar from "@/components/NavigationBar";
 import Image from "next/image";
 import Link from "next/link";
 
-const fetcher = (url) => fetch(url).then((r) => r.json()); // Define the fetcher function
+const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function FavoriteDestinations() {
   const { data: session } = useSession();
   const userId = session?.user?.userId;
 
-  const { data, error } = useSWR(`/api/users/favorites/${userId}`, fetcher); // Use the fetcher function
+  const { data, error } = useSWR(`/api/users/favorites/${userId}`, fetcher);
   console.log("data", data);
 
   if (error) return <div>Error loading data</div>;

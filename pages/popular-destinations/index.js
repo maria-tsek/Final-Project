@@ -68,48 +68,52 @@ const PopularDestinations = () => {
 
   return (
     <Container>
-      <Title>Popular Destinations</Title>
       {destinations.map((destination) => (
-        <Destination key={destination._id}>
-          <h2>{destination.name}</h2>
-          <FavoriteButton
-            mutate={mutate}
-            destinationId={destination._id}
-            userId={userId}
-          />
-          <ImageList>
-            {destination.images.map((image, index) => (
-              <ImageListItem key={index}>
-                <a
-                  href={image.image1}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={image.image1}
-                    width={300}
-                    height={200}
-                    alt={`Image 1`}
-                  />
-                </a>
-              </ImageListItem>
-            ))}
-          </ImageList>
-          <li>
-            <strong>Map URL:</strong>{" "}
-            <a
-              href={destination.mapURL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {destination.mapURL}
-            </a>
-          </li>
-          <li>
-            <strong>Description:</strong>
-            <p>{destination.description}</p>
-          </li>
-        </Destination>
+        <Link
+          key={destination._id}
+          href={`other-destinations/${destination._id}`}
+        >
+          <Destination>
+            <h2>{destination.name}</h2>
+            <FavoriteButton
+              mutate={mutate}
+              destinationId={destination._id}
+              userId={userId}
+            />
+            <ImageList>
+              {destination.images.map((image, index) => (
+                <ImageListItem key={index}>
+                  <a
+                    href={image.image1}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={image.image1}
+                      width={300}
+                      height={200}
+                      alt={`Image 1`}
+                    />
+                  </a>
+                </ImageListItem>
+              ))}
+            </ImageList>
+            <li>
+              <strong>Map URL:</strong>{" "}
+              <a
+                href={destination.mapURL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {destination.mapURL}
+              </a>
+            </li>
+            <li>
+              <strong>Description:</strong>
+              <p>{destination.description}</p>
+            </li>
+          </Destination>
+        </Link>
       ))}
       <BackButton href="/">Peloponnese</BackButton>
       <NavigationBar />
