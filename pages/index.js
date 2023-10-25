@@ -4,6 +4,7 @@ import NavigationBar from "../components/NavigationBar";
 import MainContent from "../components/MainContent";
 import dynamic from "next/dynamic";
 import styled from "styled-components";
+import MapBox from "./map";
 
 import { useSession } from "next-auth/react";
 
@@ -19,8 +20,10 @@ const HomePageWrapper = styled.div`
 
 export default function Home() {
   const { data: session } = useSession();
+
   return (
     <HomePageWrapper>
+      <MapBox />
       <Icons />
       <MainContent />
       <MapOfGreece />

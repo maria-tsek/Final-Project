@@ -1,35 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
-// import { useEffect } from "react";
+import useSWR from "swr";
 
-const FavoriteButton = ({ destinationId, mutate }) => {
-  const { data: session } = useSession();
-  const userId = session?.user?.userId;
-  console.log("userId", userId);
-  const [isFavorite, setIsFavorite] = useState("false");
+const FavoriteButton = ({ destinationId, userId }) => {
+  console.log("userId!!!!", userId);
+  const { data: user, mutate } = useSWR(`/api/users/${userId}`);
+  const [isFavorite, setIsFavorite] = useState(false);
   console.log("isFavorite", isFavorite);
+  // if (!user) {
+  //   return;
+  // }
+  useEffect(() => {
+    const favoritePlaces = user?.favoritePlaces;
+    setIsFavorite(favoritePlaces?.includes(destinationId));
+  }, [user, destinationId]);
 
-  async function fetchUser() {
-    try {
-      const response = await fetch(`/api/users/${userId}`, {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      });
-      if (response.ok) {
-        const user = await response.json();
-        console.log("user", user);
-        const favoritePlaces = await user.favoritePlaces;
-        console.log("favoritePlaces", favoritePlaces);
-        const isFavorite = favoritePlaces.includes(destinationId);
-        setIsFavorite(isFavorite);
-      }
-    } catch (error) {
-      console.error("Error fetching favorite places:", error);
-    }
-  }
-
-  fetchUser();
+  // useEffect(() => {
+  //   async function fetchUser() {
+  //     try {
+  //       const response = await fetch(`/api/users/${userId}`, {
+  //         method: "GET",
+  //         headers: { "Content-Type": "application/json" },
+  //       });
+  //       if (response.ok) {
+  //         const user = await response.json();
+  //         console.log("user", user);
+  //         const favoritePlaces = await user.favoritePlaces;
+  //         const isFavorite = favoritePlaces.includes(destinationId);
+  //         setIsFavorite(isFavorite);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching favorite places:", error);
+  //     }
+  //   }
+  //   fetchUser();
+  // }, [destinationId, userId]);
 
   // fetch user here
   // check if the destinationId exists in favoritePlaces or not
