@@ -32,26 +32,26 @@ const Destination = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center; /* Center text horizontally */
+  text-align: center;
 `;
 
 const ImageList = styled.ul`
   list-style: none;
   display: flex;
-  flex-wrap: wrap; /* Allow images to wrap to the next row */
-  justify-content: center; /* Center images horizontally */
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 16px;
-  padding: 0; /* Reset padding to remove extra space */
+  padding: 0;
 `;
 
 const ImageListItem = styled.li`
-  margin: 10px; /* Add spacing around images */
+  margin: 10px;
 `;
 
 const BackLink = styled(Link)`
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   font-size: 24px;
   color: #071952;
 `;
@@ -103,7 +103,7 @@ const PopularDestinations = () => {
                 </ImageListItem>
               ))}
             </ImageList>
-            <li>
+            {/* <li>
               <strong>Map URL:</strong>{" "}
               <a
                 href={destination.mapURL}
@@ -112,7 +112,7 @@ const PopularDestinations = () => {
               >
                 {destination.mapURL}
               </a>
-            </li>
+            </li> */}
             <li>
               <strong>Description:</strong>
               <p>{destination.description}</p>

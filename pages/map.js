@@ -1,20 +1,30 @@
 import React from "react";
-import { Map } from "react-map-gl";
+import Map, { Marker } from "react-map-gl";
 import { mapboxAccessToken } from "../secret.json";
-export default function MapBox() {
-  console.log(mapboxAccessToken);
+import "mapbox-gl/dist/mapbox-gl.css";
+
+const mapStyle = {
+  width: "50vw",
+  height: "50vh",
+  margin: "auto",
+  marginLeft: "25vw",
+};
+
+export default function MapBox({ longitude, latitude }) {
   return (
-    <div>
-      <Map
-        mapboxAccessToken={mapboxAccessToken}
-        initialViewState={{
-          longitude: -122.4,
-          latitude: 37.8,
-          zoom: 14,
-        }}
-        style={{ width: 600, height: 400 }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-      />
-    </div>
+    <Map
+      mapboxAccessToken={mapboxAccessToken}
+      initialViewState={{
+        longitude,
+        latitude,
+        zoom: 5,
+      }}
+      style={mapStyle}
+      mapStyle="mapbox://styles/mapbox/streets-v9"
+    >
+      <Marker longitude={longitude} latitude={latitude} anchor="bottom">
+        {/* You can add a custom marker here */}
+      </Marker>
+    </Map>
   );
 }

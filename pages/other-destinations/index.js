@@ -11,9 +11,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center contents vertically */
-  text-align: center; /* Center align text within the container */
-  min-height: 100vh; /* Minimum height to take up the full viewport */
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
 `;
 
 const Title = styled.h1`
@@ -21,7 +21,7 @@ const Title = styled.h1`
   font-weight: bold;
   color: #071952;
   width: 100%;
-  margin: 0; /* Reset margin to avoid extra space */
+  margin: 0;
 `;
 
 const Destination = styled.div`
@@ -36,7 +36,7 @@ const ImageList = styled.ul`
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allow wrapping images when necessary */
+  flex-wrap: wrap;
   align-items: center;
 `;
 
@@ -47,7 +47,7 @@ const ImageListItem = styled.li`
 const BackLink = styled(Link)`
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   font-size: 24px;
   color: #071952;
 `;
@@ -99,16 +99,7 @@ const OtherDestinations = () => {
                 </ImageListItem>
               ))}
             </ImageList>
-            <li>
-              <strong>Map URL:</strong>{" "}
-              <a
-                href={destination.mapURL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {destination.mapURL}
-              </a>
-            </li>
+
             <li>
               <strong>Description:</strong>
               <p>{destination.description}</p>

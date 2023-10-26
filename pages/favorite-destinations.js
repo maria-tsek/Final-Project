@@ -48,12 +48,16 @@ const ImageListItem = styled.li`
   margin: 10px 0;
 `;
 
-const MapUrl = styled.p`
-  font-weight: bold;
-`;
+// const MapUrl = styled.p`
+//   font-weight: bold;
+// `;
 
 const Description = styled.p`
   font-style: italic;
+`;
+const NavigationBarContainer = styled.div`
+  text-align: center;
+  width: 100%;
 `;
 
 export default function FavoriteDestinations() {
@@ -94,12 +98,12 @@ export default function FavoriteDestinations() {
                 </ImageListItem>
               ))}
             </ImageList>
-            <MapUrl>
+            {/* <MapUrl>
               <strong>Map URL:</strong>{" "}
               <a href={place.mapURL} target="_blank" rel="noopener noreferrer">
                 {place.mapURL}
               </a>
-            </MapUrl>
+            </MapUrl> */}
             <Description>
               <strong>Description:</strong> {place.description}
             </Description>
@@ -108,7 +112,9 @@ export default function FavoriteDestinations() {
       ) : (
         <p>No favorite places found.</p>
       )}
-      <NavigationBar />
+      <NavigationBarContainer>
+        <NavigationBar />
+      </NavigationBarContainer>
     </Container>
   );
 }
