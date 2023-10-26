@@ -7,6 +7,7 @@ import useSWR from "swr";
 import FavoriteButton from "@/components/FavoriteButton";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
+import MapBox from "../map";
 
 const PageContainer = styled.div`
   display: flex;
@@ -25,7 +26,7 @@ const Title = styled.h1`
 const BackLink = styled(Link)`
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   font-size: 24px;
   color: #071952;
 `;
@@ -36,7 +37,7 @@ const DestinationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  flex-grow: 1; /* Grow to fill available space */
+  flex-grow: 1;
 `;
 
 const DestinationTitle = styled.h2`
@@ -56,10 +57,10 @@ const ImageItem = styled.li`
   margin: 10px;
 `;
 
-const MapLink = styled.a`
-  color: #071952;
-  text-decoration: none;
-`;
+// const MapLink = styled.a`
+//   color: #071952;
+//   text-decoration: none;
+// `;
 
 const Description = styled.p`
   font-size: 16px;
@@ -110,18 +111,15 @@ const DetailPage = () => {
             </ImageItem>
           ))}
         </ImagesList>
-        <MapLink
-          href={destination.mapURL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <strong>Map URL:</strong> {destination.mapURL}
-        </MapLink>
         <li>
           <strong>Description:</strong>
           <Description>{destination.description}</Description>
         </li>
       </DestinationContainer>
+      <MapBox
+        longitude={destination.longitude}
+        latitude={destination.latitude}
+      />
       <NavigationBarContainer>
         <NavigationBar />
       </NavigationBarContainer>
