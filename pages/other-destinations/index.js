@@ -10,14 +10,7 @@ import { useSession } from "next-auth/react";
 const BackgroundImage =
   "https://images.freeimages.com/images/large-previews/51b/blue-sky-1160827.jpg";
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-`;
-
 const ContentContainer = styled.div`
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,9 +24,8 @@ const ContentContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(${BackgroundImage}) no-repeat center center;
-    background-size: cover; /* This should ensure full coverage */
-    background-attachment: fixed;
+    background: url(${BackgroundImage}) no-repeat fixed center center;
+    background-size: cover;
     filter: blur(5px);
     z-index: -1;
   }
@@ -41,7 +33,7 @@ const ContentContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 28px;
-  margin-top: 20px;
+  margin-top: 80px;
   font-weight: bold;
   color: #071952;
   width: 100%;
@@ -54,7 +46,7 @@ const DestinationsGrid = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
-  max-width: 900px;
+  max-width: 1300px;
 `;
 
 const Destination = styled.div`
@@ -85,16 +77,17 @@ const ImageListItem = styled.li`
 
 const BackLink = styled(Link)`
   position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 30px;
+  align-items: center;
+  top: 10px;
+  font-size: 40px;
   color: #002447;
-  text-decoration: none;
-  box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+  text-decoration: inherit;
 `;
 
-const BottomNavigation = styled(NavigationBar)`
-  margin-top: auto;
+const KnowLink = styled(Link)`
+  position: absolute;
+  font-size: 20px;
+  margin-top: 270px;
 `;
 
 const OtherDestinations = () => {
@@ -110,51 +103,46 @@ const OtherDestinations = () => {
   if (!destinations) return <div>Loading destinations...</div>;
 
   return (
-    <PageContainer>
+    <div>
       <ContentContainer>
-        <BackLink href="/">Peloponnese</BackLink>
+        <BackLink href="/">Peloponnese Tour</BackLink>
         <Title>Other Destinations</Title>
         <DestinationsGrid>
           {destinations.map((destination) => (
-            <>
-              <Destination>
-                <h2>{destination.name}</h2>
-                <Link
-                  key={destination._id}
-                  href={`other-destinations/${destination._id}`}
-                >
-                  Learn more
-                </Link>
-                <FavoriteButton
-                  mutate={mutate}
-                  destinationId={destination._id}
-                  userId={userId}
-                />
-                <ImageList>
-                  {destination.images.map((image, index) => (
-                    <ImageListItem key={index}>
-                      <a
-                        href={image.image1}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          src={image.image1}
-                          width={300}
-                          height={200}
-                          alt={`Image 1`}
-                        />
-                      </a>
-                    </ImageListItem>
-                  ))}
-                </ImageList>
-              </Destination>
-            </>
+            <Destination key={destination._id}>
+              <h2>{destination.name}</h2>
+              <FavoriteButton
+                mutate={mutate}
+                destinationId={destination._id}
+                userId={userId}
+              />
+              <KnowLink href={`other-destinations/${destination._id}`}>
+                Learn more
+              </KnowLink>
+              <ImageList>
+                {destination.images.map((image, index) => (
+                  <ImageListItem key={index}>
+                    <a
+                      href={image.image1}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src={image.image1}
+                        width={300}
+                        height={200}
+                        alt={`Image 1`}
+                      />
+                    </a>
+                  </ImageListItem>
+                ))}
+              </ImageList>
+            </Destination>
           ))}
         </DestinationsGrid>
       </ContentContainer>
-      <BottomNavigation />
-    </PageContainer>
+      <NavigationBar />
+    </div>
   );
 };
 

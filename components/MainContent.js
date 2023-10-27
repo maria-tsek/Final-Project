@@ -13,11 +13,12 @@ const Header = styled.h1`
   top: 0;
   left: 0;
   width: 100%;
-  text-align: center; /* Center the text */
+  text-align: center;
   position: absolute;
   margin: 0;
-  padding: 20px; /* Add padding for spacing */
-  font-size: 2em; /* Increase font size */
+  padding: 20px;
+  font-size: 3em;
+  color: #071952;
 `;
 
 const ImageCarousel = styled.div`
@@ -64,15 +65,15 @@ const About = styled.div`
   margin-top: 40px;
   margin-left: 20px;
   padding: 20px;
-  background-color: #f7f7f7; /* Add a background color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  line-height: 1.5; /* Increase line height for readability */
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.5;
 `;
 
 const H4 = styled.h4`
-  font-size: 1.8em; /* Increase font size */
+  font-size: 1.8em;
   font-weight: bold;
-  margin-top: 20px; /* Adjust the margin */
+  margin-top: 20px;
   margin-left: 20px;
 `;
 
@@ -89,7 +90,7 @@ export default function MainContent() {
 
   return (
     <MainContentWrapper>
-      <Header>Peloponnese</Header>
+      <Header>Peloponnese Tour</Header>
       <ImageCarousel>
         <CarouselImage>
           <Image
