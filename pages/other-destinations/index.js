@@ -7,7 +7,8 @@ import useSWR from "swr";
 import FavoriteButton from "@/components/FavoriteButton";
 import { useSession } from "next-auth/react";
 
-const BackgroundImage = "https://images5.alphacoders.com/129/1295700.jpg";
+const BackgroundImage =
+  "https://images.freeimages.com/images/large-previews/51b/blue-sky-1160827.jpg";
 
 const PageContainer = styled.div`
   display: flex;

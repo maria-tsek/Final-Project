@@ -8,7 +8,8 @@ import Link from "next/link";
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
-const BackgroundImage = "https://images5.alphacoders.com/129/1295700.jpg";
+const BackgroundImage =
+  "https://images.freeimages.com/images/large-previews/51b/blue-sky-1160827.jpg";
 
 const Container = styled.div`
   flex-grow: 1;

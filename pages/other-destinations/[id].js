@@ -9,7 +9,8 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import MapBox from "../map";
 
-const BackgroundImage = "https://images5.alphacoders.com/129/1295700.jpg";
+const BackgroundImage =
+  "https://images.freeimages.com/images/large-previews/51b/blue-sky-1160827.jpg";
 
 const PageContainer = styled.div`
   display: flex;
