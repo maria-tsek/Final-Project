@@ -112,7 +112,7 @@ export default function MainContent() {
       <H4>Peloponnese: Greece&#39;s Historic Peninsula of Legends</H4>
       <About>
         <p>
-          {`Nestled in the southern part of mainland Greece, the Peloponnese is a
+          Nestled in the southern part of mainland Greece, the Peloponnese is a
           land steeped in history and mythology. This rugged and diverse
           peninsula boasts a rich tapestry of ancient ruins, medieval towns, and
           pristine beaches that draw travelers from across the globe. With the
@@ -124,7 +124,7 @@ export default function MainContent() {
           Aegean Seas, picturesque villages, and vibrant traditions. As you
           explore the Peloponnese, you&#39;ll embark on a journey through time
           and nature, making it a destination that truly captures the essence of
-          Greece&#39;s historic and mythical legacy.`}
+          Greece&#39;s historic and mythical legacy.
         </p>
       </About>
     </MainContentWrapper>
