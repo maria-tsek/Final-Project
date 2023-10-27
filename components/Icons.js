@@ -18,6 +18,7 @@ const IconsWrapper = styled.nav`
 const IconLink = styled.a`
   color: ${(props) => props.color || "black"};
   text-decoration: none;
+  margin-left: 10px; /* Adjust the left margin as needed */
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -63,7 +64,8 @@ export default function AuthButton() {
         onMouseLeave={() => setUserColor("black")}
         onClick={handleUserIconClick}
       >
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon icon={faUser} size="lg" />{" "}
+        {/* Adjust the size with "lg", "2x", "3x", etc. */}
       </IconLink>
       {showSignIn && (
         <AuthButtonWrapper>

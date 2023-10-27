@@ -10,6 +10,7 @@ const NavbarWrapper = styled.nav`
   align-items: center;
   padding: 20px;
   width: 100%;
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 `;
 
 const ListWrapper = styled.ul`
@@ -20,11 +21,18 @@ const ListWrapper = styled.ul`
 
 const ListItem = styled.li`
   margin: 0 20px;
+  font-size: 1.2em;
 `;
 
 const StyledLink = styled.a`
   color: black;
   text-decoration: none;
+  transition: color 0.2s;
+  font-weight: bold;
+
+  &:hover {
+    color: #002447;
+  }
 `;
 
 export default function NavigationBar() {
@@ -33,20 +41,17 @@ export default function NavigationBar() {
       <ListWrapper>
         <ListItem>
           <Link href="/popular-destinations">
-            Popular destinations
-            {/* <StyledLink>Popular Destinations</StyledLink> */}
+            <StyledLink>Popular Destinations</StyledLink>
           </Link>
         </ListItem>
         <ListItem>
           <Link href="/other-destinations">
-            Other Destinations
-            {/* <StyledLink>Other Destinations</StyledLink> */}
+            <StyledLink>Other Destinations</StyledLink>
           </Link>
         </ListItem>
         <ListItem>
           <Link href="/favorite-destinations">
-            Favorite Destinations
-            {/* <StyledLink>Favorite Destinations</StyledLink> */}
+            <StyledLink>Favorite Destinations</StyledLink>
           </Link>
         </ListItem>
       </ListWrapper>

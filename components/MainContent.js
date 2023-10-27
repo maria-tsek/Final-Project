@@ -9,13 +9,15 @@ const MainContentWrapper = styled.div`
 `;
 
 const Header = styled.h1`
-  background-color: rgba(173, 216, 230, 0.8); /* Use rgba for transparency */
-  top: 0px;
-  left: 10px;
+  background-color: rgba(173, 216, 230, 0.8);
+  top: 0;
+  left: 0;
   width: 100%;
-  text-align: left;
+  text-align: center; /* Center the text */
   position: absolute;
   margin: 0;
+  padding: 20px; /* Add padding for spacing */
+  font-size: 2em; /* Increase font size */
 `;
 
 const ImageCarousel = styled.div`
@@ -50,6 +52,10 @@ const CarouselButton = styled.button`
   &.active {
     background-color: blue;
   }
+
+  &:hover {
+    background-color: darkblue;
+  }
 `;
 
 const About = styled.div`
@@ -57,13 +63,16 @@ const About = styled.div`
   text-align: left;
   margin-top: 40px;
   margin-left: 20px;
-  padding: 10px;
+  padding: 20px;
+  background-color: #f7f7f7; /* Add a background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  line-height: 1.5; /* Increase line height for readability */
 `;
 
 const H4 = styled.h4`
-  font-size: 1.5em;
+  font-size: 1.8em; /* Increase font size */
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 20px; /* Adjust the margin */
   margin-left: 20px;
 `;
 
