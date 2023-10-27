@@ -6,8 +6,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 const mapStyle = {
   width: "50vw",
   height: "50vh",
-  margin: "auto",
-  marginLeft: "25vw",
 };
 
 export default function MapBox({ longitude, latitude }) {
@@ -22,9 +20,11 @@ export default function MapBox({ longitude, latitude }) {
       style={mapStyle}
       mapStyle="mapbox://styles/mapbox/streets-v9"
     >
-      <Marker longitude={longitude} latitude={latitude} anchor="bottom">
-        {/* You can add a custom marker here */}
-      </Marker>
+      <Marker
+        longitude={longitude}
+        latitude={latitude}
+        anchor="bottom"
+      ></Marker>
     </Map>
   );
 }

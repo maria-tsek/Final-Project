@@ -8,30 +8,63 @@ import Link from "next/link";
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
+const BackgroundImage = "https://images5.alphacoders.com/129/1295700.jpg";
+
 const Container = styled.div`
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(${BackgroundImage}) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(5px);
+    z-index: -1;
+  }
 `;
 
 const BackLink = styled(Link)`
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: #071952;
+  top: 20px;
+  left: 10px;
+  font-size: 30px;
+  color: #002447;
+  text-decoration: none;
+  box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
 `;
 
 const Title = styled.h1`
-  font-size: 24px;
-  color: black;
+  font-size: 28px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #071952;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
 `;
 
 const FavoritePlace = styled.div`
-  margin: 20px 0;
+  flex: 0 0 calc(33.33% - 20px);
   border: 1px solid #ddd;
-  padding: 10px;
+  border-radius: 8px;
+  padding: 16px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
 `;
 
 const PlaceName = styled.h2`
@@ -41,6 +74,9 @@ const PlaceName = styled.h2`
 
 const ImageList = styled.ul`
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
 `;
 
@@ -48,16 +84,13 @@ const ImageListItem = styled.li`
   margin: 10px 0;
 `;
 
-// const MapUrl = styled.p`
-//   font-weight: bold;
-// `;
-
 const Description = styled.p`
   font-style: italic;
 `;
 const NavigationBarContainer = styled.div`
   text-align: center;
   width: 100%;
+  margin-top: auto;
 `;
 
 export default function FavoriteDestinations() {
@@ -76,6 +109,7 @@ export default function FavoriteDestinations() {
     <Container>
       <BackLink href="/">Peloponnese</BackLink>
       <Title>Favorite Places</Title>
+
       {favoritePlaces ? (
         favoritePlaces.map((place, index) => (
           <FavoritePlace key={index}>
