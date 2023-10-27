@@ -21,6 +21,12 @@ const nextConfig = {
       "live.staticflickr.com",
       "tolo-taxi.com",
       "kalamatajournal.gr",
+      "www.triimero.gr",
+      "www.travelstyle.gr",
+      "kotsiristravel.gr",
+      "www.terra-relaxa.gr",
+      "www.patrasevents.gr",
+      "www.orangesmile.com",
     ],
   },
 };

@@ -3,14 +3,14 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const NavbarWrapper = styled.nav`
-  background-color: #add8e6;
+  background-color: #002447;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   width: 100%;
-  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.1);
 `;
 
 const ListWrapper = styled.ul`
@@ -25,13 +25,13 @@ const ListItem = styled.li`
 `;
 
 const StyledLink = styled.a`
-  color: black;
+  color: white;
   text-decoration: none;
   transition: color 0.2s;
   font-weight: bold;
 
   &:hover {
-    color: #002447;
+    color: #79c5e7;
   }
 `;
 

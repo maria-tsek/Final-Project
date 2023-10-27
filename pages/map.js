@@ -19,7 +19,7 @@ export default function MapBox({ longitude, latitude }) {
       initialViewState={{
         longitude,
         latitude,
-        zoom: 5,
+        zoom: 7,
       }}
       style={mapStyle}
       mapStyle="mapbox://styles/mapbox/streets-v9"

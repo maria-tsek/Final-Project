@@ -16,6 +16,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center content vertically */
   padding: 20px;
   position: relative;
 
@@ -36,17 +37,15 @@ const Container = styled.div`
 
 const BackLink = styled(Link)`
   position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 30px;
+  align-items: center;
+  top: 10px;
+  font-size: 40px;
   color: #002447;
-  text-decoration: none;
-  box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+  text-decoration: inherit;
 `;
-
 const Title = styled.h1`
   font-size: 28px;
-  margin-top: 20px;
+  margin-top: 80px;
   font-weight: bold;
   color: #071952;
   width: 100%;
@@ -55,17 +54,17 @@ const Title = styled.h1`
 `;
 
 const FavoritePlace = styled.div`
-  flex: 0 0 calc(33.33% - 20px);
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 10px;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   box-shadow: 0 9px 9px rgba(0, 0, 0, 0.2);
-  min-width: 300px;
+  width: calc(33.33% - 20px); /* Adjust the width as needed */
+  margin: 10px; /* Add margin for spacing between places */
 `;
 
 const PlaceName = styled.h2`
@@ -88,18 +87,19 @@ const ImageListItem = styled.li`
 const Description = styled.p`
   font-style: italic;
 `;
+
 const NavigationBarContainer = styled.div`
-  text-align: center;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  margin-top: auto;
+  text-align: center;
 `;
 
-export default function FavoriteDestinations() {
+export default function ThirdComponent() {
   const { data: session } = useSession();
   const userId = session?.user?.userId;
 
   const { data, error } = useSWR(`/api/users/favorites/${userId}`, fetcher);
-  console.log("data", data);
 
   if (error) return <div>Error loading data</div>;
   if (!data) return <div>Loading...</div>;
@@ -108,7 +108,7 @@ export default function FavoriteDestinations() {
 
   return (
     <Container>
-      <BackLink href="/">Peloponnese</BackLink>
+      <BackLink href="/">Peloponnese Tour</BackLink>
       <Title>Favorite Places</Title>
 
       {favoritePlaces ? (
@@ -133,12 +133,7 @@ export default function FavoriteDestinations() {
                 </ImageListItem>
               ))}
             </ImageList>
-            {/* <MapUrl>
-              <strong>Map URL:</strong>{" "}
-              <a href={place.mapURL} target="_blank" rel="noopener noreferrer">
-                {place.mapURL}
-              </a>
-            </MapUrl> */}
+
             <Description>
               <strong>Description:</strong> {place.description}
             </Description>

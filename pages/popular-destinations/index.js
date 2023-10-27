@@ -33,7 +33,7 @@ const ContentContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 28px;
-  margin-top: 20px;
+  margin-top: 80px;
   font-weight: bold;
   color: #071952;
   width: 100%;
@@ -77,12 +77,16 @@ const ImageListItem = styled.li`
 
 const BackLink = styled(Link)`
   position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 30px;
+  align-items: center;
+  top: 10px;
+  font-size: 40px;
   color: #002447;
-  text-decoration: none;
-  box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+  text-decoration: inherit; // box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+`;
+const KnowLink = styled(Link)`
+  position: absolute;
+  font-size: 20px;
+  margin-top: 270px;
 `;
 
 const PopularDestinations = () => {
@@ -100,7 +104,7 @@ const PopularDestinations = () => {
   return (
     <div>
       <ContentContainer>
-        <BackLink href="/">Peloponnese</BackLink>
+        <BackLink href="/">Peloponnese Tour</BackLink>
         <Title>Popular Destinations</Title>
         <DestinationsGrid>
           {destinations.map((destination) => (
@@ -112,12 +116,12 @@ const PopularDestinations = () => {
                   destinationId={destination._id}
                   userId={userId}
                 />
-                <Link
+                <KnowLink
                   key={destination._id}
                   href={`other-destinations/${destination._id}`}
                 >
                   Learn more
-                </Link>
+                </KnowLink>
                 <ImageList>
                   {destination.images.map((image, index) => (
                     <ImageListItem key={index}>
