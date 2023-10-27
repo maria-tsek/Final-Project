@@ -109,7 +109,7 @@ export default function MainContent() {
           ))}
         </CarouselControls>
       </ImageCarousel>
-      <H4>Peloponnese: Greece&apos;s Historic Peninsula of Legends</H4>
+      <H4>Peloponnese: Greece&#39;s Historic Peninsula of Legends</H4>
       <About>
         <p>
           Nestled in the southern part of mainland Greece, the Peloponnese is a
@@ -119,12 +119,12 @@ export default function MainContent() {
           mythical city of Mycenae, the ancient theater of Epidaurus, and the
           majestic Temple of Apollo Epicurius, the Peloponnese is an
           archaeological wonderland that echoes the stories of the past. But
-          this region is not just about its past; it&apos;s also a place of
+          this region is not just about its past; it&#39;s also a place of
           natural beauty, featuring serene coastlines along the Ionian and
           Aegean Seas, picturesque villages, and vibrant traditions. As you
-          explore the Peloponnese, you&apos;ll embark on a journey through time
+          explore the Peloponnese, you&#39;ll embark on a journey through time
           and nature, making it a destination that truly captures the essence of
-          Greece&apos;s historic and mythical legacy.
+          Greece&#39;s historic and mythical legacy.
         </p>
       </About>
     </MainContentWrapper>
