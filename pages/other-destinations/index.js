@@ -6,6 +6,7 @@ import Link from "next/link";
 import useSWR from "swr";
 import FavoriteButton from "@/components/FavoriteButton";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const BackgroundImage =
   "https://images.freeimages.com/images/large-previews/51b/blue-sky-1160827.jpg";
@@ -44,7 +45,7 @@ const Title = styled.h1`
 const DestinationsGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space between;
   gap: 20px;
   max-width: 1300px;
 `;
@@ -98,6 +99,7 @@ const OtherDestinations = () => {
     error,
     mutate,
   } = useSWR("/api/other-destinations");
+  const router = useRouter();
 
   if (error) return <div>Failed to load destinations</div>;
   if (!destinations) return <div>Loading destinations...</div>;
@@ -122,10 +124,11 @@ const OtherDestinations = () => {
               <ImageList>
                 {destination.images.map((image, index) => (
                   <ImageListItem key={index}>
-                    <a
-                      href={image.image1}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <div
+                      onClick={() =>
+                        router.push(`other-destinations/${destination._id}`)
+                      }
+                      style={{ cursor: "pointer" }}
                     >
                       <Image
                         src={image.image1}
@@ -133,7 +136,7 @@ const OtherDestinations = () => {
                         height={200}
                         alt={`Image 1`}
                       />
-                    </a>
+                    </div>
                   </ImageListItem>
                 ))}
               </ImageList>
