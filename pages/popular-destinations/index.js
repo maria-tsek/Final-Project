@@ -6,6 +6,7 @@ import Link from "next/link";
 import useSWR from "swr";
 import FavoriteButton from "@/components/FavoriteButton";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const BackgroundImage =
   "https://images.freeimages.com/images/large-previews/51b/blue-sky-1160827.jpg";
@@ -81,8 +82,9 @@ const BackLink = styled(Link)`
   top: 10px;
   font-size: 40px;
   color: #002447;
-  text-decoration: inherit; // box-shadow: 5px 5px 10px rgba(0, 0.5, 0.5, 0.5);
+  text-decoration: inherit;
 `;
+
 const KnowLink = styled(Link)`
   position: absolute;
   font-size: 20px;
@@ -97,6 +99,7 @@ const PopularDestinations = () => {
     error,
     mutate,
   } = useSWR("/api/popular-destinations");
+  const router = useRouter();
 
   if (error) return <div>Failed to load destinations</div>;
   if (!destinations) return <div>Loading destinations...</div>;
@@ -108,40 +111,39 @@ const PopularDestinations = () => {
         <Title>Popular Destinations</Title>
         <DestinationsGrid>
           {destinations.map((destination) => (
-            <>
-              <Destination>
-                <h2>{destination.name}</h2>
-                <FavoriteButton
-                  mutate={mutate}
-                  destinationId={destination._id}
-                  userId={userId}
-                />
-                <KnowLink
-                  key={destination._id}
-                  href={`other-destinations/${destination._id}`}
-                >
-                  Learn more
-                </KnowLink>
-                <ImageList>
-                  {destination.images.map((image, index) => (
-                    <ImageListItem key={index}>
-                      <a
-                        href={image.image1}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image
-                          src={image.image1}
-                          width={300}
-                          height={200}
-                          alt={`Image 1`}
-                        />
-                      </a>
-                    </ImageListItem>
-                  ))}
-                </ImageList>
-              </Destination>
-            </>
+            <Destination key={destination._id}>
+              <h2>{destination.name}</h2>
+              <FavoriteButton
+                mutate={mutate}
+                destinationId={destination._id}
+                userId={userId}
+              />
+              <KnowLink
+                key={destination._id}
+                href={`other-destinations/${destination._id}`}
+              >
+                Learn more
+              </KnowLink>
+              <ImageList>
+                {destination.images.map((image, index) => (
+                  <ImageListItem key={index}>
+                    <div
+                      onClick={() =>
+                        router.push(`other-destinations/${destination._id}`)
+                      }
+                      style={{ cursor: "pointer" }}
+                    >
+                      <Image
+                        src={image.image1}
+                        width={300}
+                        height={200}
+                        alt={`Image 1`}
+                      />
+                    </div>
+                  </ImageListItem>
+                ))}
+              </ImageList>
+            </Destination>
           ))}
         </DestinationsGrid>
       </ContentContainer>
